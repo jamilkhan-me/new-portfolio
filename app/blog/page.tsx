@@ -10,7 +10,7 @@ const Page = () => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   return (
     <div className="max-w-7xl mx-auto mt-48 mb-20 px-8">
-      <h1 className="heading">I've been building a lot of things</h1>
+      <h1 className="heading">I&apos;ve been building a lot of things</h1>
       <h1 className="text-lg font-light py-10 lg:px-32 flex items-center justify-center">
         Come explore the fruits of my labor, from small experiments to
         full-blown web applications, each project showcases my love for coding
