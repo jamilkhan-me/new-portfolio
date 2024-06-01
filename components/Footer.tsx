@@ -5,7 +5,10 @@ import MagicButton from "@/components/ui/MagicButton";
 
 const Footer = () => {
   return (
-    <footer className="w-full pt-20 pb-10" id="contact">
+    <footer
+      className="max-w-7xl mx-auto mt-32 mb-20 px-8 w-full pt-20 pb-10"
+      id="contact"
+    >
       {/* background grid */}
       <div className="w-full absolute left-0 -bottom-72 min-h-96">
         <img

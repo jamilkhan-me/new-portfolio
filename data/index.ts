@@ -1,8 +1,79 @@
 export const navItems = [
-  { name: "About", link: "#about" },
-  { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
-  { name: "Contact", link: "#contact" },
+  { name: "Home", link: "/" },
+  { name: "About", link: "/about" },
+  { name: "Projects", link: "/projects" },
+  { name: "Blog", link: "/blog" },
+  { name: "Book Note", link: "/bookNote" },
+];
+
+export const myImages = [
+  {
+    id: "01",
+    name: "image1",
+    src: "/myImages/image1.jpg",
+  },
+  {
+    id: "02",
+    name: "image2",
+    src: "/myImages/image2.jpg",
+  },
+  {
+    id: "03",
+    name: "image3",
+    src: "/myImages/image3.jpg",
+  },
+];
+
+export const skills = [
+  {
+    name: "Reactjs",
+    imgSrc: "/logo/reactjs.png",
+  },
+  {
+    name: "Nextjs",
+    imgSrc: "/logo/nextjs.png",
+  },
+  {
+    name: "Typescript",
+    imgSrc: "/logo/typescript.png",
+  },
+  {
+    name: "Nodejs",
+    imgSrc: "/logo/nodejs.png",
+  },
+  {
+    name: "MongoDB",
+    imgSrc: "/logo/mongodb.png",
+  },
+  {
+    name: "Gatsby",
+    imgSrc: "/logo/gatsby.png",
+  },
+  {
+    name: "Firebase",
+    imgSrc: "/logo/firebase.png",
+  },
+  {
+    name: "Javascript",
+    imgSrc: "/logo/javascript.png",
+  },
+  {
+    name: "HTML",
+    imgSrc: "/logo/html.png",
+  },
+  {
+    name: "CSS",
+    imgSrc: "/logo/css.png",
+  },
+  {
+    name: "TailwindCSS",
+    imgSrc: "/logo/tailwindcss.png",
+  },
+
+  {
+    name: "SCSS",
+    imgSrc: "/logo/scss.png",
+  },
 ];
 
 export const gridItems = [
