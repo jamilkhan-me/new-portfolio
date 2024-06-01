@@ -6,7 +6,7 @@ import { projects } from "@/data";
 import { PinContainer } from "@/components/ui/Pin";
 import Image from "next/image";
 
-const page = () => {
+const Page = () => {
   return (
     <div className="mt-48 mb-20" id="projects">
       <h1 className="heading">
@@ -81,4 +81,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
