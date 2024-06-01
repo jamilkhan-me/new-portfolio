@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ReactNode, useState } from "react";
 
-const page = () => {
+const Page = () => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   return (
     <div className="max-w-7xl mx-auto mt-48 mb-20 px-8">
@@ -48,7 +48,11 @@ const page = () => {
               )}
             </AnimatePresence>
             <Card>
-              <img className="rounded-t-2xl w-full h-52" src={item.image}></img>
+              <Image
+                className="rounded-t-2xl w-full h-52"
+                src={item.image}
+                alt={item.image}
+              />
               <CardDate>{item.date}</CardDate>
               <CardTitle>{item.title}</CardTitle>
               <CardDescription>{item.description}</CardDescription>
@@ -60,7 +64,7 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
 
 export const CardDate = ({
   className,

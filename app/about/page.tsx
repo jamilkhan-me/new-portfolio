@@ -50,6 +50,7 @@ const page = () => {
         <div className="my-20 max-w-7xl grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mx-auto">
           {skills.map((skill) => (
             <Button
+              key={skill.name}
               duration={Math.floor(Math.random() * 10000) + 10000}
               borderRadius="1.75rem"
               style={{
@@ -64,7 +65,7 @@ const page = () => {
               // remove bg-white dark:bg-slate-900
               className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800  px-4 gap-5 rounded-2xl flex flex-row items-center justify-center"
             >
-              <img
+              <Image
                 src={skill.imgSrc}
                 alt={skill.name}
                 className="w-10 sm:w-16 rounded-full"
