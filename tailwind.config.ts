@@ -15,6 +15,7 @@ const config = {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
     "./data/**/*.{ts,tsx}",
+    "./mdx-components.tsx",
   ],
   prefix: "",
   theme: {
@@ -173,6 +174,7 @@ const config = {
   },
   plugins: [
     require("tailwindcss-animate"),
+    require("@tailwindcss/typography"),
     addVariablesForColors,
     function ({ matchUtilities, theme }: any) {
       matchUtilities(

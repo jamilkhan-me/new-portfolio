@@ -19,7 +19,7 @@ const Page = () => {
       <hr />
       <div
         className={cn(
-          "grid grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-3  py-10"
+          "grid grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-3 px-16 md:px-0 py-10"
         )}
       >
         {projects.map((item, idx) => (
@@ -52,6 +52,8 @@ const Page = () => {
                 className="rounded-t-2xl w-full h-52"
                 src={item.image}
                 alt={item.image}
+                width={500}
+                height={500}
               />
               <CardDate>{item.date}</CardDate>
               <CardTitle>{item.title}</CardTitle>

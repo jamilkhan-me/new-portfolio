@@ -6,7 +6,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { ReactNode, useState } from "react";
 
-const BlogCard = () => {
+const BlogCard = (props: any) => {
+  const { post, idx } = props;
+  console.log(post);
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   return (
     <div className="max-w-7xl mx-auto mt-32 mb-20 px-8">
@@ -16,14 +18,14 @@ const BlogCard = () => {
       </h1>
       <div
         className={cn(
-          "grid grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-3  py-10"
+          "grid grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-3 px-10 md:px-0 py-10"
         )}
       >
         {projects.map((item, idx) => (
           <Link
             href={item?.link}
             key={item?.link}
-            className="relative group  block p-2 h-[28rem] w-96"
+            className="relative group  block p-2 h-[28rem] w-80"
             onMouseEnter={() => setHoveredIndex(idx)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
@@ -52,6 +54,37 @@ const BlogCard = () => {
             </Card>
           </Link>
         ))}
+        {/* <Link
+          href={post.title}
+          key={post.title}
+          className="relative group  block p-2 h-[28rem] w-80"
+          onMouseEnter={() => setHoveredIndex(idx)}
+          onMouseLeave={() => setHoveredIndex(null)}
+        >
+          <AnimatePresence>
+            {hoveredIndex === idx && (
+              <motion.span
+                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block  rounded-3xl"
+                layoutId="hoverBackground"
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: 1,
+                  transition: { duration: 0.15 },
+                }}
+                exit={{
+                  opacity: 0,
+                  transition: { duration: 0.15, delay: 0.2 },
+                }}
+              />
+            )}
+          </AnimatePresence>
+          <Card>
+            <img className="rounded-t-2xl w-full h-52" src={post.image}></img>
+            <CardDate>{post.date}</CardDate>
+            <CardTitle>{post.title}</CardTitle>
+            <CardDescription>{post.description}</CardDescription>
+          </Card>
+        </Link> */}
       </div>
     </div>
   );

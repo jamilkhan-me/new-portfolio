@@ -19,8 +19,8 @@ const page = () => {
             About.
           </h1>
           <p className="text-3xl my-8 leading-[2.5rem] font-mono font-semibold text-n-1">
-            I&apos;m a software engineer from London with a passion for building
-            digital products.
+            I&apos;m Jamil Khan, a full stack developer from London with a
+            passion for building digital products.
           </p>
           <p className="text-lg font-mono  text-n-2">
             When I&apos;m not immersed in lines of code, I&apos;m out exploring
@@ -68,6 +68,8 @@ const page = () => {
               <Image
                 src={skill.imgSrc}
                 alt={skill.name}
+                width={500}
+                height={500}
                 className="w-10 sm:w-16 rounded-full"
               />
               <span className="text-sm font-bold md:text-lg md:font-semibold">

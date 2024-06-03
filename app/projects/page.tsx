@@ -28,10 +28,12 @@ const Page = () => {
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                   style={{ backgroundColor: "#13162D" }}
                 >
-                  <Image src="/bg.png" alt="bgimg" />
+                  <Image src="/bg.png" alt="bgimg" width={500} height={500} />
                 </div>
                 <Image
                   src={item.img}
+                  width={500}
+                  height={500}
                   alt="cover"
                   className="z-10 absolute bottom-0"
                 />
@@ -61,7 +63,13 @@ const Page = () => {
                         transform: `translateX(-${5 * index + 2}px)`,
                       }}
                     >
-                      <Image src={icon} alt="icon5" className="p-2" />
+                      <Image
+                        src={icon}
+                        alt="icon5"
+                        width={500}
+                        height={500}
+                        className="p-2"
+                      />
                     </div>
                   ))}
                 </div>
