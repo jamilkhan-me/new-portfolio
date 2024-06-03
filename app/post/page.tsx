@@ -1,5 +1,4 @@
 import PostPreview from "@/components/PostPreview";
-import { HoverEffect } from "@/components/ui/CardHoverEffect";
 import getPostMetadata from "@/utils/getPostMetadata";
 import React from "react";
 
@@ -15,9 +14,11 @@ const PostPage = () => {
         and design.
       </h1>
       <hr />
-      {postMetaData.map((post, idx) => {
-        return <PostPreview key={idx} post={post} />;
-      })}
+      <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10">
+        {postMetaData.map((post, idx) => {
+          return <PostPreview key={idx} post={post} />;
+        })}
+      </div>
     </main>
   );
 };

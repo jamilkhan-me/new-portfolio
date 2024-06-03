@@ -2,23 +2,27 @@
 import Link from "next/link";
 import React from "react";
 import { cn } from "@/utils/cn";
-import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import Image from "next/image";
 
 const PostPreview = (props) => {
   const { post } = props;
 
   return (
-    <div
-      className={cn("grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10")}
-    >
+    <div className="w-full h-[70vh] overflow-hidden">
       <Link
         href={`/post/${post.slug}`}
-        className="relative group  block p-2 h-full w-full"
+        className="relative group p-2  block h-full w-full"
       >
         <div className="rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20">
           <div className="relative z-50">
-            <div className="p-4">
+            <div className="p-2">
+              <Image
+                className="rounded-2xl w-full h-60"
+                src={post.image}
+                alt={post.title}
+                width={500}
+                height={300}
+              />
               <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-4")}>
                 {post.title}
               </h4>

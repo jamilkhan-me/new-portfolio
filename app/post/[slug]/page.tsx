@@ -6,7 +6,7 @@ import matter from "gray-matter";
 
 function getPostContent(slug: any) {
   const folder = "posts/";
-  const file = folder + `${slug}.md`;
+  const file = folder + `${slug}.mdx`;
   const content = fs.readFileSync(file, "utf-8");
 
   const matterResult = matter(content);

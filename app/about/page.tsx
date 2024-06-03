@@ -9,8 +9,10 @@ import { SparklesCore } from "@/components/ui/Sparkles";
 import Experience from "@/components/Experience";
 import Clients from "@/components/Clients";
 import PhotoGallary from "@/components/ui/PhotoGallary";
+import getPostMetadata from "@/utils/getPostMetadata";
+import PostPreview from "@/components/PostPreview";
 
-const page = () => {
+export default function AboutPage() {
   return (
     <div className="relative  bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
       <div className="max-w-7xl w-full grid grid-cols-1 sm:grid-cols-2 my-40 gap-10 ">
@@ -84,6 +86,4 @@ const page = () => {
       <PhotoGallary />
     </div>
   );
-};
-
-export default page;
+}
