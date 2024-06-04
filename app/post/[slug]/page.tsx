@@ -3,6 +3,8 @@ import getPostMetadata from "@/utils/getPostMetadata";
 import React from "react";
 import fs from "fs";
 import matter from "gray-matter";
+import { serialize } from "next-mdx-remote/serialize";
+import { MDXRemote } from "next-mdx-remote";
 
 function getPostContent(slug: any) {
   const folder = "posts/";
@@ -31,10 +33,8 @@ export default function BlogPage(props) {
   const post = getPostContent(slug);
 
   return (
-    <main className="max-w-7xl mx-auto mt-48 mb-20 px-8">
-      <article className="prose text-white-100">
-        <Markdown>{post.content}</Markdown>
-      </article>
+    <main className="max-w-5xl mx-auto mt-48 mb-20 px-8 prose dark:prose-invert">
+      <Markdown>{post.content}</Markdown>
     </main>
   );
 }

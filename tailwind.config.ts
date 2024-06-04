@@ -27,6 +27,41 @@ const config = {
       },
     },
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            code: {
+              color: "#DDE6ED", // Default text color
+              backgroundColor: "#526D82", // Background color similar to VSCode's default theme
+              padding: "2px 4px", // Add padding to inline code
+              borderRadius: "4px", // Add border radius
+              fontFamily: "Courier New, Courier, monospace", // Use a monospaced font
+            },
+            "pre code": {
+              backgroundColor: "transparent", // Remove background for code inside pre
+              padding: 0, // Remove padding for code inside pre
+            },
+            pre: {
+              backgroundColor: "#526D82", // Background color for pre blocks
+              color: "#DDE6ED", // Text color for pre blocks
+              padding: "16px", // Add padding to pre blocks
+              borderRadius: "8px", // Add border radius to pre blocks
+              lineHeight: "1.5", // Line height for better readability
+              overflowX: "auto", // Enable horizontal scrolling for long code lines
+            },
+            // Additional styles for different token types
+            ".hljs-comment": { color: "#6a9955" },
+            ".hljs-keyword": { color: "#569cd6" },
+            ".hljs-string": { color: "#ce9178" },
+            ".hljs-variable": { color: "#9cdcfe" },
+            ".hljs-function": { color: "#dcdcaa" },
+            ".hljs-built_in": { color: "#c586c0" },
+            ".hljs-literal": { color: "#569cd6" },
+            ".hljs-type": { color: "#4ec9b0" },
+            ".hljs-meta": { color: "#9cdcfe" },
+          },
+        },
+      },
       colors: {
         black: {
           DEFAULT: "#000",

@@ -10,13 +10,13 @@ const withMDX = nextMDX({
 
 const nextConfig = {
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
-  // experimental: {
-  //   appdir: true,
-  //   mdxRs: true,
-  // },
-  // image: {
-  //   domains: ["github.com"],
-  // },
+  experimental: {
+    appdir: true,
+    mdxRs: true,
+  },
+  image: {
+    domains: ["github.com"],
+  },
 };
 
 export default withMDX(nextConfig);

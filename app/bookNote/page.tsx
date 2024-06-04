@@ -1,20 +1,19 @@
 import BookNote from "@/components/BookNote";
 import React from "react";
-import getPostMetadata from "@/utils/getPostMetadata";
-import PostPreview from "@/components/PostPreview";
+import getAllBookNotes from "@/components/getAllBookNotes";
 
-const page = () => {
-  const postMetaData = getPostMetadata("posts");
+export default async function BookNotes() {
+  const allBookNotes = await getAllBookNotes();
+
   return (
-    <div>
-      <BookNote />
-      <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10">
-        {postMetaData.map((post, idx) => {
-          return <PostPreview key={idx} post={post} />;
-        })}
+    <main className="relative  bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
+      <div className="max-w-7xl w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4">
+          {allBookNotes.map((book, idx) => {
+            return <BookNote key={idx} book={book} />;
+          })}
+        </div>
       </div>
-    </div>
+    </main>
   );
-};
-
-export default page;
+}
