@@ -19,6 +19,9 @@ const config = {
   ],
   prefix: "",
   theme: {
+    hljs: {
+      theme: "atom-one-dark",
+    },
     container: {
       center: true,
       padding: "2rem",
@@ -30,25 +33,39 @@ const config = {
       typography: {
         DEFAULT: {
           css: {
-            code: {
-              color: "#DDE6ED", // Default text color
-              backgroundColor: "#526D82", // Background color similar to VSCode's default theme
-              padding: "2px 4px", // Add padding to inline code
-              borderRadius: "4px", // Add border radius
-              fontFamily: "Courier New, Courier, monospace", // Use a monospaced font
+            h1: {
+              color: "#FF5F00",
             },
-            "pre code": {
-              backgroundColor: "transparent", // Remove background for code inside pre
-              padding: 0, // Remove padding for code inside pre
+            h2: {
+              color: "#DC5F00",
             },
-            pre: {
-              backgroundColor: "#526D82", // Background color for pre blocks
-              color: "#DDE6ED", // Text color for pre blocks
-              padding: "16px", // Add padding to pre blocks
-              borderRadius: "8px", // Add border radius to pre blocks
-              lineHeight: "1.5", // Line height for better readability
-              overflowX: "auto", // Enable horizontal scrolling for long code lines
+            h3: {
+              color: "#E88D67",
             },
+            h4: {
+              color: "#FAB95B",
+            },
+
+            // code: {
+            //   color: "#DDE6ED", // Default text color
+            //   backgroundColor: "#240750", // Background color similar to VSCode's default theme
+            //   padding: "2px 4px", // Add padding to inline code
+            //   borderRadius: "4px", // Add border radius
+            //   fontFamily: "monospace", // Use a monospaced font
+            // },
+            // "pre code": {
+            //   padding: 0, // Remove padding for code inside pre
+            // },
+            // pre: {
+            //   fontFamily: "monospace",
+            //   background: "#344C64", // Background color for pre blocks
+            //   color: "#FAB95B", // Text color for pre blocks
+            //   padding: "16px", // Add padding to pre blocks
+            //   borderRadius: "8px", // Add border radius to pre blocks
+            //   zIndex: "100",
+            //   lineHeight: "1.5", // Line height for better readability
+            //   overflowX: "auto", // Enable horizontal scrolling for long code lines
+            // },
             // Additional styles for different token types
             ".hljs-comment": { color: "#6a9955" },
             ".hljs-keyword": { color: "#569cd6" },
@@ -210,6 +227,7 @@ const config = {
   plugins: [
     require("tailwindcss-animate"),
     require("@tailwindcss/typography"),
+    require("tailwind-highlightjs"),
     addVariablesForColors,
     function ({ matchUtilities, theme }: any) {
       matchUtilities(
@@ -232,6 +250,11 @@ const config = {
         },
         { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
       );
+    },
+  ],
+  safelist: [
+    {
+      pattern: /hljs+/,
     },
   ],
 } satisfies Config;
