@@ -15,19 +15,6 @@ function getPostContent(slug: any) {
   return matterResult;
 }
 
-// export const generateStaticParams = async () => {
-//   const posts = getPostMetadata("posts");
-
-//   return posts.map((post) => ({ slug: post.slug }));
-// };
-
-// export async function generateMetadata({ params, searchParams }) {
-//   const id = params?.slug ? " ⋅ " + params?.slug : "";
-//   return {
-//     title: `Jamil Khan ${id.replaceAll("_", "")}`,
-//   };
-// }
-
 export default async function BlogPage(props) {
   const slug = props.params.slug;
   const post = getPostContent(slug);

@@ -10,7 +10,10 @@ const BookNote = (props) => {
       <div
         className={cn("grid grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-3 ")}
       >
-        <Link className="book-wrapper" href="book slug">
+        <Link
+          className="book-wrapper cursor-pointer"
+          href={`bookNote/${book.slug}`}
+        >
           <div className="book-items">
             <div className="main-book-wrap">
               <div className="book-cover">

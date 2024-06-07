@@ -4,7 +4,7 @@ import RecentProjects from "@/components/RecentProjects";
 import BookNote from "@/components/BookNote";
 import getPostMetadata from "@/components/getPostMetadata";
 import PostPreview from "@/components/PostPreview";
-import getAllBookNotes from "@/components/getAllBookNotes";
+import getAllBookNotes from "@/utils/getAllBookNotes";
 
 export default async function Home() {
   const allPosts = await getPostMetadata();

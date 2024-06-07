@@ -1,6 +1,6 @@
 import BookNote from "@/components/BookNote";
 import React from "react";
-import getAllBookNotes from "@/components/getAllBookNotes";
+import getAllBookNotes from "@/utils/getAllBookNotes";
 
 export default async function BookNotes() {
   const allBookNotes = await getAllBookNotes();
