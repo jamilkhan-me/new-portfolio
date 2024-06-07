@@ -20,11 +20,6 @@ export default async function Home() {
             A small selection of{" "}
             <span className="text-purple">recent writing</span>
           </h1>
-          <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10">
-            {allPosts.map((post, idx) => {
-              return <PostPreview key={idx} post={post} />;
-            })}
-          </div>
         </div>
 
         <div className="my-20">
@@ -32,11 +27,7 @@ export default async function Home() {
             A small selection of{" "}
             <span className="text-purple">recent reading</span>
           </h1>
-          <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4">
-            {allBookNotes.map((book, idx) => {
-              return <BookNote key={idx} book={book} />;
-            })}
-          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4"></div>
         </div>
       </div>
     </main>

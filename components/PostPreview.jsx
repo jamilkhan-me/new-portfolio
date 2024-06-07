@@ -8,6 +8,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const PostPreview = (props) => {
   const { post, idx } = props;
+
   let [hoveredIndex, setHoveredIndex] = useState();
 
   return (

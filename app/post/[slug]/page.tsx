@@ -33,22 +33,34 @@ export default async function BlogPage(props) {
   const post = getPostContent(slug);
 
   return (
-    <main className="max-w-4xl mx-auto mt-48 mb-20 px-8 prose dark:prose-invert">
+    <main className="max-w-5xl mx-auto mt-48 mb-20 px-8 ">
       <div>
-        <Image src={post.image} alt={post.title} width={500} height={500} />
-        <h1>{post.title}</h1>
+        <h1 className="text-3xl font-semibold">{post.data.title}</h1>
+        <p className="text-sm font-thin py-3">
+          Published in
+          <span> {post.data.date} </span>
+        </p>
+        <Image
+          className="h-80 my-8"
+          src={post.data.image}
+          alt={post.data.title}
+          width={500}
+          height={500}
+        />
       </div>
-      <Markdown
-        options={{
-          overrides: {
-            code: {
-              component: Code,
+      <div className="prose dark:prose-invert">
+        <Markdown
+          options={{
+            overrides: {
+              code: {
+                component: Code,
+              },
             },
-          },
-        }}
-      >
-        {post.content}
-      </Markdown>
+          }}
+        >
+          {post.content}
+        </Markdown>
+      </div>
     </main>
   );
 }
